@@ -1,4 +1,4 @@
-# AutoJS-demo
+# AutoJS Pro Typescript Template
 ## 快速开始
 #### 安装依赖
 ```
@@ -10,7 +10,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 #### 常用命令
 ##### npm run dev
-启动 AutoJS + web 构建，输出到 dist 文件夹。
+启动 AutoJS Pro + web 构建，输出到 dist 文件夹。
 
 ##### npm run web
 启动本地服务器，可在局域网内访问。在 `./config/config.ts` 中可以配置自己的本地电脑 IP，怎么查看请自行百度。

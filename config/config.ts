@@ -1,6 +1,11 @@
-// 为了避免 IP 变化，自行把电脑 IP 设置为静态 IP，或者路由器上绑定 IP
-// 搞自动获取 IP 的搞不了，当然你也可以搞个自动获取 IP 脚本，在电脑上运行下，把结果输出在某个文件
-// 然后再读文件加载 IP
-// 只是为了调试方便而已，看下电脑本地 IP 就能解决的事，摸了摸了
-export const HOST = '192.168.0.180';
+import dotenv from 'dotenv';
+
+interface EnvConfig {
+  host: string;
+}
+
+// 从根目录下的 .env 文件获取配置
+const envConfig = dotenv.config().parsed as unknown as EnvConfig;
+
+export const HOST = envConfig.host;
 export const PORT = 3000;

@@ -4,7 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "dev": "webpack --config config/index.ts --mode=development --watch",
+    "preDev": "node ./ip.js",
+    "dev": "npm run preDev && webpack --config config/index.ts --mode=development --watch",
     "build": "webpack --config config/index.ts --mode=production",
     "web": "webpack serve --config config/webpack.config.renderer.ts --mode=development --env=web"
   },
@@ -39,6 +40,7 @@
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "css-minimizer-webpack-plugin": "^3.0.1",
+    "dotenv": "^10.0.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
