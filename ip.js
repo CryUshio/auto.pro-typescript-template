@@ -1,5 +1,5 @@
 const os = require('os');
-const fs = require('fs');
+const fsx = require('fs-extra');
 
 function getIPAddress() {
   const interfaces = os.networkInterfaces();
@@ -14,5 +14,5 @@ function getIPAddress() {
   }
 }
 
-const myHost = getIPAddress();
-fs.writeFileSync('./.env', `host=${myHost}`);
+const host = getIPAddress();
+fsx.writeJSONSync('.config.json', { host }, { spaces: 2 });
