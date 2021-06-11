@@ -1,0 +1,46 @@
+@import '@/assets/fonts/fonts.css';
+
+html {
+  background-color: rgba(217, 222, 255, 0.5);
+  background-repeat: no-repeat;
+}
+
+#app {
+  height: 100vh;
+  background: url('./assets/img/bg.png') no-repeat;
+  background-size: cover;
+}
+
+.main-layout {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 20px;
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: #FFF;
+
+    > h1 {
+      text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    }
+
+    > button {
+      padding: 0.5em 0;
+      margin-top: 16px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      border-radius: 16px;
+      background-color: rgba(255, 255, 255, 0.75);
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+}

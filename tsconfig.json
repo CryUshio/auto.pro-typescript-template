@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "./dist/", // 打包到的目录
+    "sourceMap": false, // 是否生成sourceMap（用于浏览器调试）
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "moduleResolution": "Node",
+    "module": "commonjs",
+    "target": "es5", // 转化成的目标语言
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./config"],
+    "lib": ["ESNext"],
+    "allowJs": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["*.test.ts"]
+}
